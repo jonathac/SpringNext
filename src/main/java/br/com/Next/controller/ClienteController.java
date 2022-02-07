@@ -15,7 +15,7 @@ public class ClienteController {
 	
 	@RequestMapping(name = "/", method = RequestMethod.GET)
 	public String getIndex() {
-		return "home";
+		return "index";
 	}
 	
 }
