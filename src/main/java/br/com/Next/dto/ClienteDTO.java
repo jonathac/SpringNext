@@ -4,14 +4,16 @@ public class ClienteDTO {
 	private String cpf;
 	private String senha;
 	private String nome;
+	private Double saldo;
 	
 	public ClienteDTO() {}
 	
-	public ClienteDTO(String cpf, String senha, String nome) {
+	public ClienteDTO(String cpf, String senha, String nome, Double saldo) {
 		super();
 		this.cpf = cpf;
 		this.senha = senha;
 		this.nome = nome;
+		this.saldo = saldo;
 	}
 	
 	public String getCpf() {
@@ -31,6 +33,14 @@ public class ClienteDTO {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public Double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(Double saldo) {
+		this.saldo = saldo;
 	}
 
 	

@@ -31,17 +31,22 @@ public class Cliente {
 
 	@Column(name = "cpf")
 	private String cpf;
+	
+	@Column(name = "saldo")
+	private Double saldo;
+	
 
 	//private String dataString;
 
 	public Cliente() {
 		super();
 	}
-	public Cliente(String nome, String senha, String cpf) {
+	public Cliente(String nome, String senha, String cpf, Double Saldo) {
 		super();
 		this.nome = nome;
 		this.senha = senha;
 		this.cpf = cpf;
+		this.saldo = saldo;
 		//this.data = data;
 
 	}
@@ -96,4 +101,10 @@ public class Cliente {
 		this.dataString = dataString;
 	}
 */
+	public Double getSaldo() {
+		return saldo;
+	}
+	public void setSaldo(Double saldo) {
+		this.saldo = saldo;
+	}
 }

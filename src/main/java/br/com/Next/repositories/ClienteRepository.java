@@ -17,4 +17,12 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer>{
 		@Query("Select c from Cliente c where c.cpf = ?1 and c.senha = ?2")
 		Cliente findByCpfAndSenha(@Param("cpf") String cpf, @Param("senha") String password);
 
+		@Query("Select c from Cliente c where c.nome = ?1")
+		Cliente findByNome(@Param("nome") String nome);
+		
+		@Query("Select c from Cliente c where c.cpf = ?1")	
+		Cliente findByCpf(@Param("cpf") String cpf);
+
+		/*@Query("Update set saldo=?1 from Cliente c where c.cpf = ?2")
+		Cliente updateByCpf(@Param("cpf") String cpf));*/
 }

@@ -30,7 +30,7 @@
 		<ul>
 			<li class="login"><a href="#"> <img class="foto"
 					th:src="@{/img/semfoto.jpg}" alt="">
-					<h2 class="name"></h2>
+					<h2 class="name" th:text="${clientes}"></h2>
 			</a></li>
 			<li class="login"><a href="#">
 					<h6 class="name">237-Next Ag: 3858 C/C:473681-8</h6>
@@ -38,7 +38,7 @@
 			<li class="login"><a href="#">
 					<h6 class="saldo">
 						R$
-						<h2>200.000,00</h2>
+						<h2 th:text="${saldo}"></h2>
 
 					</h6> <span class="icon"><box-icon name='low-vision'
 							color='rgb(206, 200, 200)'></box-icon></span>
@@ -62,7 +62,7 @@
 							name='credit-card' type='solid' color='#00ff5f'></box-icon></span> <span
 					class="titulo">Cartões</span>
 			</a></li>
-			<li class="list"><a href="#"> <span class="icon"><box-icon
+			<li class="list"><a href="/pix"> <span class="icon"><box-icon
 							name='pinterest-alt' type='logo' color='#00ff5f'></box-icon></span> <span
 					class="titulo">Pix</span>
 			</a></li>
@@ -78,9 +78,14 @@
 							name='crown' type='solid' color='#00ff5f'></box-icon></span> <span
 					class="titulo">Mimos</span>
 			</a></li>
-		</ul>
-		<i class="icon" id="power-off"><box-icon name='power-off'
-				color='#00ff5f' size='md'></box-icon></i>
+		
+			<li class="list"><a href="/logout"><span class="icon"><box-icon
+							name='power-off' color='#00ff5f' size='md'></box-icon></span> <span
+					class="titulo">Logout</span> </a></li>
+			
+			<span class="titulo">log</span>
+			
+	</ul>
 	</div>
 	<div class="principal">
 		<div class="conteudo">
