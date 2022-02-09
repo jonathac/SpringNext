@@ -22,10 +22,11 @@ body{
 }
 
 .left-login > h1 {
-    color: #77ffc0;
+    color: #00ff88;
+    ;
 }
 
-.left-login > h5{
+.left-login > h5 > a{
     color: #f74ce8;
     cursor: pointer;
 }

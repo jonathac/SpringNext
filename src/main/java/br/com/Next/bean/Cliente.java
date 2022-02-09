@@ -10,9 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="cliente") // nome da tabelda db
+@Table(name = "cliente") // nome da tabelda db
 public class Cliente {
 
 	@Id
@@ -20,20 +19,32 @@ public class Cliente {
 	@SequenceGenerator(name = "", sequenceName = "", allocationSize = 1)
 	@Column(name = "id_cliente")
 	private Integer idCliente;
-	
+
 	@Column(name = "nome")
 	private String nome;
-	
-	@Column(name = "data_nascimento")
-	private Date data;
-	
+
+	/*@Column(name = "data_nascimento")
+	private Date data;*/
+
 	@Column(name = "senha")
 	private String senha;
-	
-	@Column(name = "cpf")
-	private Integer cpf;
 
-	
+	@Column(name = "cpf")
+	private String cpf;
+
+	//private String dataString;
+
+	public Cliente() {
+		super();
+	}
+	public Cliente(String nome, String senha, String cpf) {
+		super();
+		this.nome = nome;
+		this.senha = senha;
+		this.cpf = cpf;
+		//this.data = data;
+
+	}
 	
 	public Integer getIdCliente() {
 		return idCliente;
@@ -50,7 +61,7 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
+/*
 	public Date getData() {
 		return data;
 	}
@@ -58,7 +69,7 @@ public class Cliente {
 	public void setData(Date data) {
 		this.data = data;
 	}
-
+*/
 	public String getSenha() {
 		return senha;
 	}
@@ -67,14 +78,22 @@ public class Cliente {
 		this.senha = senha;
 	}
 
-	public Integer getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(Integer cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
-	
-	
+/*
+	public String getDataString() {
+		
+		return dataString;
+		
+	}
+
+	public void setDataString(String dataString) {
+		this.dataString = dataString;
+	}
+*/
 }

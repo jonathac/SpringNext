@@ -1,5 +1,6 @@
 package br.com.Next.bo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.Next.bean.Cliente;
@@ -8,6 +9,7 @@ import br.com.Next.repositories.ClienteRepository;
 @Service
 public class ClienteBo {
 
+	@Autowired
 	private ClienteRepository clienteRepository;
 
 	public ClienteBo(ClienteRepository clienteRepository) {
